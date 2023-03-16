@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">{{ "websiteName" | translate }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">{{"Home" | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{"About" | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{"Services" | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{"Contact" | translate}}</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item ">
+              <div class="dropdown language-picker-area ms-5 justify-content-end">
+
+                <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+                  <img [src]="getFlagUrl()" alt="{{selectedLanguage}} flag" width="20" height="20">
+                  {{selectedLanguage}}
+                </button>
+
+
+
+
+
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#" (click)="selectLanguage(languages[0].code)">
+                      <img [src]="languages[0].flagUrl" alt="{{languages[0].label}} flag" width="20" height="20">
+                      {{languages[0].label}}
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" (click)="selectLanguage(languages[1].code)">
+                      <img [src]="languages[1].flagUrl" alt="{{languages[1].label}} flag" width="20" height="20">
+                      {{languages[1].label}}
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" (click)="selectLanguage(languages[2].code)">
+                      <img [src]="languages[2].flagUrl" alt="{{languages[2].label}} flag" width="20" height="20">
+                      {{languages[2].label}}
+                    </a>
+                  </li>
+                </ul>
+
+
+
+              </div>
+          </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="box container">
+  <div class="row justify-content-center">
+    <div class="col-6 border p-3">
+      <div class="card">
+        <img src="/assets/img/card-photo.jpg" height="300" class="card-img-top " alt="Image description">
+        <div class="card-body">
+          <h5 class="card-title">{{"Card title" | translate}}</h5>
+          <p class="card-text">{{"text"|translate}}</p>
+          <a href="#" class="btn btn-primary">{{"search" | translate}}</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
